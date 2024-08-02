@@ -1,6 +1,8 @@
 package johnguevarra;
 
-public abstract class ElementoCatalogo {
+import java.io.Serializable;
+
+public abstract class ElementoCatalogo implements Serializable {
     private String isbn;
     private String titolo;
     private int annoPubblicazione;

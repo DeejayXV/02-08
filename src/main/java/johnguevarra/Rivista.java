@@ -1,12 +1,8 @@
 package johnguevarra;
 
-public class Rivista extends ElementoCatalogo {
-    public enum Periodicita {
-        SETTIMANALE,
-        MENSILE,
-        SEMESTRALE
-    }
+import johnguevarra.enums.Periodicita;
 
+public class Rivista extends ElementoCatalogo {
     private Periodicita periodicita;
 
     public Rivista(String isbn, String titolo, int annoPubblicazione, int numeroPagine, Periodicita periodicita) {

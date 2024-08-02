@@ -12,7 +12,18 @@ public class Main {
 
         catalogo.stampaCatalogo();
 
-        ElementoCatalogo elementoCercato = catalogo.cercaPerIsbn("978-3-16-148410-0");
-        System.out.println("Elemento trovato: " + elementoCercato);
+        try {
+            ElementoCatalogo elementoCercato = catalogo.cercaPerIsbn("978-3-16-148410-0");
+            System.out.println("Elemento trovato: " + elementoCercato);
+        } catch (Exception e) {
+            System.err.println(e.getMessage());
+        }
+
+        try {
+            ElementoCatalogo elementoCercato2 = catalogo.cercaPerIsbn("978-1-23-456789-7"); 
+            System.out.println("Elemento trovato: " + elementoCercato2);
+        } catch (Exception e) {
+            System.err.println(e.getMessage());
+        }
     }
 }

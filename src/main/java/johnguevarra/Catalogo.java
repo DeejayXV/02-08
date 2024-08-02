@@ -14,11 +14,10 @@ public class Catalogo {
         elementiCatalogo.put(elemento.getIsbn(), elemento);
     }
 
-    public ElementoCatalogo rimuoviElemento(String isbn) {
-        return elementiCatalogo.remove(isbn);
-    }
-
-    public ElementoCatalogo cercaPerIsbn(String isbn) {
+    public ElementoCatalogo cercaPerIsbn(String isbn) throws Exception {
+        if (!elementiCatalogo.containsKey(isbn)) {
+            throw new Exception("Elemento con ISBN " + isbn + " non trovato.");
+        }
         return elementiCatalogo.get(isbn);
     }
 
